@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="Es-es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoomiWeb</title>
+  <link rel="icon" href="src/media/img/logo.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script src="src/js/app1.js" defer></script>
+
+</head>
+
+<body>
+
+  <main>
+    <section class="SectionSelector">
+      <!--     Creo una secion con el header para mantener siempre el Background        -->
+      <header class="Header" id="Header">
+
+        <img class="Header-logo" src="src/media/img/logo.png" title="Logo del Servidor"
+          alt="La imagen es el logo del servidor, que es un candelaro azul con particulas de estrella">
+    
+      </header>
+
+
+      <div class="Overall"> <!--     Div para add contenidocomo si fuera un HeroImage pero con texto       -->
+        <div class="Overall-titleContainer">
+          <h1 class="Overall-titlePrimary">Loomi</h1>
+          <h1 class="Overall-titleSecundary">Roleplay</h1>
+        </div>
+
+
+
+        <ul class="Overall-sectionsList">
+          <!--    Ul para add links que abriran las paginas. Podria ser un nav secundario    -->
+          <li class="Overall-section">
+            <div class="Overall-sectionContainer">
+              <button class="Overall-sectionLink" type="button" id="LoomiButton" value="0">Que es <br> Loomi?</button>
+              <i class="fa-solid fa-caret-left Overall-leftArrow"></i>
+            </div>
+          </li>
+          <li class="Overall-section">
+            <div class="Overall-sectionContainer"><a href="#" class="Overall-sectionLink"></a>
+              <button class="Overall-sectionLink" type="button" id="UnirseButton" value="1">¿Como <br> Unirme?</button>
+              <i class="fa-solid fa-caret-left Overall-leftArrow"></i>
+            </div>
+          </li>
+          <li class="Overall-section">
+            <div class="Overall-sectionContainer">
+              <button class="Overall-sectionLink" type="button" id="RoleplayButton" value="2">Ques es <br>
+                Roleplay?</button>
+
+              <i class="fa-solid fa-caret-left Overall-leftArrow"></i>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+    </section>
+
+
+
+
+
+
+
+    <section class="SectionContainer "> <!--  Primer contenido. Descripcion del proyecto y fotos de comunidad   -->
+      <nav class="SectionContainer-nav"> <!-- Creamos un nav dentro de la seccion (Quiza reutilizable)  -->
+        <a  href="#Header"><img class="SectionContainer-navLogo" src="src/media/img/logo.png" title="Logo del Servidor"
+            alt="La imagen es el logo del servidor, que es un candelaro azul con particulas de estrella"></a>
+        <ul class="SectionContainer-navList">
+          <li class="SectionContainer-navListElement"><button type="button" value="0" class="Overall-sectionLink SectionContainer-navListLink">Loomi</button>
+          </li>
+          <li class="SectionContainer-navListElement"><button type="button" value="1" class="Overall-sectionLink SectionContainer-navListLink">Unirse</button>
+          </li>
+          <li class="SectionContainer-navListElement"><button type="button" value="2" class="Overall-sectionLink SectionContainer-navListLink">Roleplay</button></li>
+          
+          <li class="SectionContainer-navListElement"><a class="SectionContainer-navListLink" target="_blank" href="https://patreon.com/user?u=73177454">Apoyo</a>
+          </li>
+          <!-- <li class="SectionContainer-navListElement"><a class="SectionContainer-navListLink"
+              href="#">Sobre<br>Nosotros</a></li> -->
+          <li class="SectionContainer-navListElement"><a class="SectionContainer-navListLink" target="_blank" href="https://patreon.com/user?u=73177454">Tienda</a></li>
+          <!-- <li class="SectionContainer-navListElement"><a class="SectionContainer-navListLink" href="#">Redes</a></li> -->
+        </ul>
+        
+      </nav>
+
+
+
+      <section class="Section Loomi" id="Loomi"> <!--  Estructurizo la secion con un div  -->
+        <div class="Loomi-carrousel">
+          <!--  Creo el primer apartado de la secion. Un Carrousel de imagenes desplegables  -->
+          <button type="button" class="Loomi-carrouselBtn" value="0" id="Carrousel-prev"><i
+              class="fa-regular fa-square-caret-up  carrouselIcon"></i>
+          </button>
+          <ul class="Loomi-carrouselList">
+            <li class="Loomi-carrouselElement"><img title="Imagen del carrousel 1" class="Loomi-carrouselImage" loading="lazy"
+                src="" alt="Una imagen dentro del servidor de minecraft">
+            </li>
+            <li class="Loomi-carrouselElement"><img title="Imagen del carrousel 2" class="Loomi-carrouselImage" loading="lazy" src="" alt="Una imagen dentro del servidor de minecraft">
+            </li>
+            <li class="Loomi-carrouselElement"><img title="Imagen del carrousel 3" class="Loomi-carrouselImage" loading="lazy" src="" alt="Una imagen dentro del servidor de minecraft">
+            </li>
+          </ul>
+          <button type="button"  class="Loomi-carrouselBtn" value="3" id="Carrousel-next"><i
+              class="fa-regular fa-square-caret-down carrouselIcon"></i>
+          </button>
+        </div>
+
+        <img class="Loomi-ajolote" src="src/media/img/jolote.webp" alt="Un ajolote en un cubo de minecraft">
+        <!--Decoracion en la web-->
+
+        <div class="Loomi-desc">
+          <!--  Segunda seccion de el contenido. Una breve introducion  y descripcion al proyecto  -->
+          <h3 class="Loomi-descTitle" id="LoomiDesc">¿Que es<br>Loomi?</h3>
+          <p class="Loomi-descDesc">Loomi es nuestro servidor de <span class="blue">Minecraft</span> con
+            <br> Mod con VoiceChat,<span class="blue">
+              inspirado</span> en <span class="blue">GTAV RolePlay</span>,
+            <br> buscando ofrecer entretenimiento de alta <br>
+            calidad y <span class="pink"> una experiencia unica</span>
+            <br>Aquí, puedes ser quien tú quieras ser. ¿Te gustaría
+            <br>proteger a los ciudadanos como un dedicado policía, o
+            <br>prefieres vivir al límite como el criminal más buscado de
+            <br>la ciudad?
+          </p>
+          <h5 class="Loomi-descSlogan">Las posibilidades son infinitas
+            <br>y la eleccion es tuya
+          </h5>
+        </div>
+
+      </section>
+
+
+
+
+      <section class="Section Unirse" id="Unirse">
+        <h3 class="Unirse-titleTitle">¿Como puedo<br>unirme?</h3>
+        <div class="Unirse-container">
+          <div class="Unirse-desc">
+            <p class="Unirse-descDesc blue">
+              Unirse es fácil, solo deberás apretar el<br> botón que dice descargar y <br>descomprimirlo en la carpeta
+              de mods <br>
+              de tu Minecraft v1.16.5 <br>
+            </p>
+            <p class="Unirse-descImportant important">
+              ¿No sabes como hacerlo? <br>
+              Aquí te dejamos un <a href="#" class="Unirse-descTutorialLink"> tutorial</a>
+            </p>
+            <br>
+            <p class="Unirse-descDesc blue">
+            Cualquier duda puedes comunicarte <br>con el staff en el propio discord,<br> estaremos encantados de
+            ayudarte
+
+            </p>
+            <div class="Unirse-descButtons">
+              <a target="_blank" href="https://www.mediafire.com/file/bx40xr1617cvc45/mods.rar/file" class="Unirse-downloadButton">
+                <p class="Unirse-downloadTitle">Descargar</p>
+                <i class="fa-regular fa-circle-down"></i>
+              </a>
+              <a target="_blank" href="https://discord.gg/YDzhKu8b5f" class="Unirse-downloadButton">
+                <p class="Unirse-downloadTitle">Discord</p>
+                <i class="fa-brands fa-discord"></i>
+              </a>
+            </div>
+          </div>
+          <div class="Unirse-tutorial">
+            <div class="Unirse-tutorialVideo">
+              <h6 class="Unirse-tutorialTitle">Tutorial</h6>
+              <iframe class="Unirse-tutorialMedia" 
+              loading ="lazy"
+              src="https://www.youtube.com/embed/YYZzpN-YPZA?si=VS9je7nMKXgdES_3" 
+              title="Video Tutorial para Unirse al servidor" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <!-- <video src="/" class="Unirse-tutorialMedia"></video> -->
+            </div>
+            <p class="Unirse-tutorialRequisitos">Requisitos mínimos<br>Recomendados:
+              8 de Ram <br>
+              i5-7600k</p>
+
+          </div>
+
+        </div>
+
+
+
+
+      </section>
+
+
+
+
+      <section class="Section Roleplay" id="Roleplay">
+        <h3 class="Roleplay-title">¿Que es el Roleplay?</h3>
+        <div class="Roleplay-container">
+          <div class="Roleplay-concep">
+            <h4 class="Roleplay-conecepTitle">Conecptos Basicos<br>del RolePlay</h4>
+            <ul class="Roleplay-list">
+              <li class="Roleplay-listElement">
+                <div class="Roleplay-listCard">
+                  <h5 class="Roleplay-listCardTitle">MG</h5>
+                  <p class="Roleplay-listCardDesc">
+                    <span class="bolder">[Meta Gaming]</span>
+                    <br> es una falta que se comete cuando usamos información obtenida de manera OOC en el contexto IC.</p>
+
+                </div>
+              </li>
+
+              <li class="Roleplay-listElement">
+                <div class="Roleplay-listCard">
+                  <h5 class="Roleplay-listCardTitle">IC</h5>
+                  <p class="Roleplay-listCardDesc"><span class="bolder">[In-Character]</span><br>Es todo lo que pase dentro de Rol, la perspectiva de todo lo que le pase a nuestro personaje y entorno.</p>
+                  <!-- <button type="button" class="Roleplay-listCardButton">Ver mas</button> -->
+                </div>
+              </li>
+
+              <li class="Roleplay-listElement">
+                <div class="Roleplay-listCard">
+                  <h5 class="Roleplay-listCardTitle">PK</h5>
+                  <p class="Roleplay-listCardDesc"><span class="bolder">[Player Kill]</span><br> Esta es la forma de referenciar la muerte del jugador TEMPORAL, en otras palabras, que ha perdido la memoria.
+                  </p>
+                  <!-- <button type="button" class="Roleplay-listCardButton">Ver mas</button> -->
+                </div>
+              </li>
+
+
+            </ul>
+          </div>
+
+          <div class="Roleplay-desc">
+            <p class="Roleplay-descDescription">
+              El RolePlay es una actividad <br>donde decides ponerte en los <br>zapatos de un personaje ficticio<br>
+              dándole vida.<br>Te presentamos nuestra guía de <br>RolePlay, donde puedes ver todos <br>estos conceptos y
+              más para que<br> te quites todas tus dudas
+            </p>
+            <!-- <button type="button" class="Roleplay-descButton">Guia de<br>RolePlay</button> -->
+          </div>
+        </div>
+
+
+
+
+      </section>
+    </section>
+
+
+  </main>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

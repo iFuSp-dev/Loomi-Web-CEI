@@ -1,0 +1,1037 @@
+@font-face {
+    font-family: "Blocky";
+    src: url(../fonts/PressStart2P-Regular.ttf);
+}
+@font-face {
+    font-family: "Pixelon";
+    src: url(../fonts/Pixelon.ttf);
+}
+button{
+    background-color: transparent;
+    border: transparent;
+}
+:root{
+     /*CSS Hex*/
+     --light-thulian-pink : rgb(255, 181, 212);
+    --thulian-pink: rgb(227, 126, 175);
+    --dark-thulian-pink : rgb(254, 123, 186);
+    --darkest-thulian-pink : #863B6E;
+    --lightMonstone: rgb(172, 237, 255);
+    --moonstone: #5daac0ff;
+    --ucla-blue: #40708fff;
+    --yale-blue: #1D4569;
+    --delft-blue: #233454ff;
+    --space-cadet: #041332;
+}
+
+::-webkit-scrollbar{
+    background-color: var(--delft-blue);
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--delft-blue);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--yale-blue);
+    border-radius: 20%;
+}
+
+
+
+main{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.blue{
+    color: var(--lightMonstone);
+}
+.pink{
+    color: var(--light-thulian-pink);
+}
+.bolder{
+    font-weight: 900;
+}
+
+/* Body */
+body{
+    width: 100%;
+    background-color: var(--space-cadet);
+    margin: 0;
+    padding: 0;
+}
+
+ /* --------------------------------------------------------------------------------- */
+/*                                   SectionSelector                                 */
+.SectionSelector{
+    margin: 0;
+    padding: 0;
+    background: url('../media/img/Background.webp'), 
+    -webkit-linear-gradient(var(--space-cadet) 30%, var(--yale-blue)100%), 
+    linear-gradient(var(--space-cadet)30%, var(--yale-blue)100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.Header{
+    margin-top: 0.4rem;
+    height: 13vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Header-logo{
+    margin: 1rem;
+    width: 7%;
+    height: 100%;
+}
+.Header-btn {
+    position: relative;
+    background-color: transparent; /* Asegúrate de que el fondo sea transparente si es necesario */
+    border: none; /* Elimina cualquier borde predeterminado */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando pases el mouse sobre el botón */
+}
+
+
+.Header-btnIcon{
+    font-size: 6rem;
+}
+
+/* OverAll */
+
+
+.Overall{
+    height: 86.5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Overall-titleContainer{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 9.5rem;
+}
+
+.Overall-titlePrimary{
+    color: var(--light-thulian-pink);
+    font-family: "Blocky";
+    font-weight: bolder;
+    font-size: 13rem;
+    margin: 0;
+    text-shadow: 
+    0 0 35px var(--dark-thulian-pink),
+    3px 3px 0 var(--darkest-thulian-pink);
+
+}
+.Overall-titleSecundary{
+    margin-top: 1rem;
+    rotate:-0.2deg;
+    color: #A2E8FF;
+    font-family: "Blocky";
+    font-weight: bolder;
+    font-size: 4rem;
+    line-height: 0rem;
+    text-shadow:
+      0 0 35px var(--lightMonstone),
+      3px 3px 0 var(--moonstone);
+
+}
+/* Overall UL */
+
+.Overall-sectionsList{
+    position: relative;
+    top: 15.5rem;
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(3,20rem);
+    align-items: center;
+    gap: 0rem;
+}
+
+.Overall-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+
+}
+.Overall-sectionContainer{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Overall-sectionLink{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Blocky";
+    color: white;
+    transition: font-size 0.8s;
+}
+.Overall-leftArrow{
+    font-size: 2rem;
+    color: white;
+}
+
+
+.Overall-sectionLink:hover{
+    cursor: pointer;
+    font-size: 3rem;
+    color: var(--thulian-pink);
+}
+@media screen and (max-width:1400px) {
+    .Overall-titleContainer{
+        top:3rem
+    }
+    .Overall-sectionsList{
+        top: 12rem
+    }
+    .Overall-titlePrimary{
+        font-size: 8rem;
+        margin: 0;
+        top: 2rem;
+    }
+}
+
+
+@media screen and (max-width:1199px) {
+    .Overall-titlePrimary{
+        font-size: 8rem;
+        margin: 0;
+    }
+}
+@media screen and (max-width:992px) {
+
+    .Overall-titlePrimary{
+        font-size: 7rem;
+        margin: 0;
+    }
+    .Overall-sectionsList{
+        top: 19rem;
+        grid-template-columns: 20rem;
+        gap: 2rem;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    .Header-logo{
+        width: 7rem;
+    }
+
+    .Overall-titleContainer{
+        width: 100%;
+        top: 5rem
+    }
+    .Overall-titlePrimary{
+        font-size: 4rem;
+    }
+    .Overall-titleSecundary{
+        font-size: 1.3rem;
+    }
+
+    .Overall-sectionsList{
+        top: 8rem;
+        grid-template-columns: 20rem;
+        gap: 2rem;
+    }
+
+    .Overall-sectionLink{
+        font-size: 1.3rem;
+    }
+    .Overall-sectionLink:hover{
+        font-size: 1.7rem;
+    }
+}
+
+
+
+ /* --------------------------------------------------------------------------------- */
+/*                                   Que es Loomi                                    */
+/* --------------------------------------------------------------------------------*/
+.SectionContainer{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    background: url('../media/img/Background.webp'), 
+    -webkit-linear-gradient(var(--space-cadet) 30%, var(--yale-blue)100%), 
+    linear-gradient(var(--space-cadet)30%, var(--yale-blue)100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+/* Navigation TOP */
+.SectionContainer-nav{ 
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #172B56;
+    height: 10vh;
+}
+
+.SectionContainer-navLogo{
+
+    height: 78%;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.83)
+
+}
+.SectionContainer-navList{
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+}
+.SectionContainer-navListElement{
+    margin: 1.8rem;
+}
+.SectionContainer-navListLink{
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    text-decoration: none;
+    color: white;
+    font-family: "Blocky";
+    transition: font-size 0.7s;
+}
+.SectionContainer-navListLink:hover{
+font-size: 1.42rem;
+text-decoration: underline;
+}
+
+@media screen and (max-width:1400px) {
+    .SectionContainer-navListLink{
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width:1199px) {
+    .SectionContainer{
+        max-height: none;
+        height: auto;
+
+    }
+
+    .SectionContainer-nav{
+        visibility: hidden;
+        display: none;
+        width: 0;
+        font-size: 0rem;
+    }
+    .SectionContainer-navListElement{
+        width: 0px;
+    }
+    .SectionContainer-navList{
+        width: 0px;
+    }
+    .SectionContainer-navListLink{
+        font-size: 0;
+    }
+}
+@media screen and (max-width:992px) {
+    .SectionContainer{
+        max-height: none;
+        height: auto;
+
+    }
+
+    .SectionContainer-nav{
+        visibility: hidden;
+        display: none;
+        width: 0;
+        font-size: 0rem;
+    }
+    .SectionContainer-navListElement{
+        width: 0px;
+    }
+    .SectionContainer-navList{
+        width: 0px;
+    }
+    .SectionContainer-navListLink{
+        font-size: 0;
+    }
+
+}
+@media screen and (max-width:768px) {
+    .SectionContainer{
+        max-height: none;
+        height: auto;
+
+    }
+
+    .SectionContainer-nav{
+        visibility: hidden;
+        display: none;
+        width: 0;
+        font-size: 0rem;
+    }
+    .SectionContainer-navListElement{
+        width: 0px;
+    }
+    .SectionContainer-navList{
+        width: 0px;
+    }
+    .SectionContainer-navListLink{
+        font-size: 0;
+    }
+
+}
+
+
+/* Contenido de Que es Loomi */
+.Section {
+    max-height: 90vh;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+.Section.visible {
+    display: flex; /* Cambia el display a flex cuando sea visible */
+}
+
+.Section.fade-in {
+    opacity: 1;
+}
+
+/* Carrousel */
+.Loomi-carrousel{
+    position: relative;
+    left: 14.5rem;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 60vh;
+}
+.Loomi-carrouselBtn{
+    background-color: transparent;
+    align-items: center;
+
+    color: white;
+    border: none;
+}
+.carrouselIcon{
+    font-size: 2.5rem;
+}
+.Loomi-carrouselList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Loomi-carrouselElement{
+    border: 1px solid var(--thulian-pink);
+    width: 23rem;
+    max-height: 12rem;
+    margin: 0.3rem 0;
+
+}
+.Loomi-carrouselImage{
+    width: 100%;
+    height: 100%;
+}
+
+.Loomi-carrouselElement:nth-child(2){
+    width: 28rem;
+    max-height: 14rem;
+}
+
+@media screen and (max-width:1400px) {
+    .Loomi-carrouselElement{
+        width: 20rem;
+        height: 10rem;
+        margin: 0.2rem 0;
+    
+    }
+    .Loomi-content{
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .Loomi-carrousel{
+        visibility: visible;
+        display: flex;
+        height: auto;
+        position:static ;
+
+    }
+    .Loomi-desc{
+        position: static;
+    }
+}
+@media screen and (max-width:1199px) {
+    .Loomi-content{
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+    }
+    .Loomi-carrousel{
+        visibility: visible;
+        display: flex;
+        height: auto;
+        position:static ;
+
+    }
+    .Loomi-desc{
+        position: static;
+    }
+}
+@media screen and (max-width:992px) {
+    .Loomi-content{
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+    }
+    .Loomi-carrousel{
+        visibility: visible;
+        display: flex;
+        height: auto;
+        position:static ;
+
+    }
+    .Loomi-desc{
+        position: static;
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+    .Loomi-content{
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+    }
+    .Loomi-carrousel{
+        visibility: hidden;
+        display: none;
+        height: auto;
+
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+.Loomi-ajolote{
+    position: relative;
+    top:13rem;
+    left: 19rem;
+    rotate: 13deg;
+    width: 5rem;
+    height: 5rem;
+}
+
+.Loomi-desc{
+    position: relative;
+    top: 13.5rem;
+    left: 15rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.Loomi-descTitle{
+    font-family: "Blocky";
+    text-align: center;
+    color: var(--light-thulian-pink);
+    font-size: 4.8rem;
+    text-shadow: 
+    0 0 35px var(--dark-thulian-pink),
+    3px 3px 0 var(--darkest-thulian-pink);
+}
+.Loomi-descDesc{
+    font-family: "Pixelon";
+
+    margin-top: 1rem;
+    font-size: 1.62rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: white;
+}
+.Loomi-descSlogan{
+    margin: 1.2rem;
+    font-family: "Pixelon";
+    font-size: 1.9rem;
+    text-align: center;
+    line-height: 2rem;
+    color: var(--lightMonstone);
+}
+@media screen and (max-width:1400px) {
+    .Loomi-desc{
+        top: 0;
+        left: 0rem;
+        margin-top: 5rem;
+        padding: 0 1rem;
+    }
+}
+@media screen and (max-width:1199px) {
+    .Loomi-desc{
+        top: 0;
+        left: -5rem;
+        margin-top: 5rem;
+        padding: 0 1rem;
+    }
+    .Loomi-descTitle{
+        margin-bottom:2rem;
+        font-size: 3rem;
+    }
+    .Loomi-descDesc{
+        font-size: 1.4rem;
+    }
+    .Loomi-descSlogan{
+        font-size: 2.3rem;
+    }
+    .Loomi-ajolote{
+        left:1rem
+    }
+}
+@media screen and (max-width:992px) {
+    .Loomi-desc{
+        top: 0;
+        left: 0;
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+    .Loomi-descTitle{
+        margin-bottom:2rem;
+        font-size: 3rem;
+    }
+    .Loomi-descDesc{
+        font-size: 1.4rem;
+    }
+    .Loomi-descSlogan{
+        font-size: 2.3rem;
+    }
+    .Loomi-ajolote{
+        left:0rem
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .Loomi-desc{
+        top: 0;
+        left: 0;
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+    .Loomi-descTitle{
+        margin-bottom:2rem;
+        font-size: 2rem;
+    }
+    .Loomi-descDesc{
+        font-size: 1.4rem;
+    }
+    .Loomi-descSlogan{
+        font-size: 2.3rem;
+    }
+    .Loomi-ajolote{
+        left:0rem
+    }
+
+}
+
+ /* --------------------------------------------------------------------------------- */
+/*                                   RolePlay                                    */
+/* --------------------------------------------------------------------------------*/
+
+
+.Roleplay{
+    padding-top: 1.2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Roleplay-title{
+    margin-top: 4rem;
+    font-family: 'Blocky';
+    color: #A2E8FF;
+text-shadow:
+      0 0 35px var(--lightMonstone),
+      3px 3px 0 var(--moonstone);
+    font-size: 2rem;
+
+}
+
+.Roleplay-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+/* Secion Concepto */
+.Roleplay-concep{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+}
+.Roleplay-conecepTitle{
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Blocky';
+    color: var(--light-thulian-pink);
+    text-shadow: 
+    0 0 35px var(--dark-thulian-pink),
+    3px 3px 0 var(--darkest-thulian-pink);
+}
+.Roleplay-list{
+    display: flex;
+    gap: 0.7rem;
+}
+/* Cards */
+.Roleplay-listCard{
+    margin-top: 1rem;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--lightMonstone);
+    border: 3px solid #863B6E;
+    box-shadow: 1px 4px 10px #863b6edb,
+    -1px -4px 10px #863b6edb;
+}
+
+.Roleplay-listCardTitle{
+    
+    margin-top: 0.7rem;
+    text-align: center;
+    max-width: 14rem;
+    font-family: 'Blocky';
+    color: #863B6E;
+    font-size: 1.3rem;
+}
+.Roleplay-listCardDesc{
+    margin-top: 0.8rem;
+    max-width: 12rem;
+    font-family: 'Pixelon';
+    font-weight: 350;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1rem;
+    color: #863B6E;
+}
+.Roleplay-listCardButton{
+    margin: 1rem 0;
+    font-family: 'Blocky';
+    color: #FFB5D4;
+    font-size: 1.1rem;
+    background-color: #863B6E;
+    border-radius: 1rem;
+}
+
+/* Secion Desc */
+.Roleplay-desc{
+    flex-direction: column;
+    margin-left: 7rem;
+    margin-top: 10rem;
+    display: flex;
+}
+
+.Roleplay-descDescription{
+    color: white;
+    font-family: 'Pixelon';
+    font-size: 1.75rem;
+    line-height: 1.8rem;
+    text-align: center;
+}
+.Roleplay-descButton{
+    margin-top: 1.5rem;
+    background-color: var(--lightMonstone);
+    font-family: "Blocky";
+    color: var(--moonstone);
+}
+
+
+/* Responsive Que es el Roleplay */
+@media screen and (max-width:1400px) {
+    .Roleplay-concep{
+        padding: 1rem;
+        margin-top: 3rem;
+    }
+    .Roleplay-desc{
+        margin-left: 4rem;
+        margin-top: 2rem;
+    }
+}
+@media screen and (max-width:1200px) {
+    .Roleplay-concep{
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+    .Roleplay-desc{
+        margin-left: 4rem;
+    margin-top: 2rem;
+    }
+}
+@media screen and (max-width:992px) {
+    .Roleplay-concep{
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+    .Roleplay-desc{
+        margin-left: 4rem;
+    margin-top: 2rem;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .Roleplay{
+        max-height:none;
+        visibility: visible;
+        display: flex;
+    }
+    .Roleplay-container{
+        flex-direction: column;
+    }
+    .Roleplay-desc{
+        margin: 1rem 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .Roleplay-descDescription{
+        font-size: 1.1rem;
+        line-height: 1.2rem;
+    }
+    .Roleplay-concep{
+        padding: 1rem;
+        margin-top: 3rem;
+    }
+    .Roleplay-list{
+        flex-direction: column;
+    }
+    .Roleplay-listCard{
+        margin:  1.3rem 2.4rem;
+    }
+
+
+
+}
+
+
+
+
+
+ /* --------------------------------------------------------------------------------- */
+/*                                   Unirse                                    */
+/* --------------------------------------------------------------------------------*/
+
+
+
+
+.Unirse{
+    flex-direction: column;
+    opacity: 1;
+}
+
+.Unirse-titleTitle{
+    display: block;
+    position: relative;
+    right: 37rem;
+    padding-top: 4rem;
+    text-align: right;
+    font-size: 3.2rem;
+    font-family: 'Blocky';
+    color: var(--light-thulian-pink);;
+    text-shadow: 
+    0 0 35px var(--dark-thulian-pink),
+    3px 3px 0 var(--darkest-thulian-pink);
+}
+.Unirse-container{
+    margin-top: 1.7rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Descripcion */
+.Unirse-desc{
+    display: flex;
+    flex-direction: column;
+    margin-right: 13rem;
+}
+.Unirse-descDesc{
+font-family: 'Pixelon';
+font-weight: 700;
+line-height: 1.7rem;
+font-size: 1.4rem;
+text-align: center;
+}
+.Unirse-descImportant{
+    text-align: center;
+    margin-top: 1.3rem;
+    color: white;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    font-family: 'Pixelon';
+}
+.Unirse-descTutorialLink{
+    color: var(--light-thulian-pink);
+    font-weight: 900;
+}
+.Unirse-descButtons{
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+.Unirse-downloadButton{
+    text-decoration: none;
+    max-height: 2rem;
+    max-width: 5.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.8rem 3.1rem;
+    margin: 0.4rem;
+    background-color: var(--thulian-pink);
+    border : 5px solid #863B6E;
+ 
+}
+.Unirse-downloadButton:hover{
+    background-color: rgb(169, 57, 111);
+
+}
+.Unirse-downloadTitle{
+    color: var(--delft-blue);
+    font-family: 'Blocky';
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+/* Tutorial Video */
+
+.Unirse-tutorial{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+.Unirse-tutorialVideo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--lightMonstone);
+    border: 5px solid #14C4DC;
+}
+.Unirse-tutorialTitle{
+    text-decoration: underline;
+    color: #041332;
+    font-family: 'Pixelon';
+    margin-top: 0.7rem;
+    font-weight: 550;
+    font-size: 1.4rem;
+
+}
+.Unirse-tutorialMedia{
+    margin: 0.3rem;
+    width: 23rem;
+    height: 14rem;
+    background-color: black;
+}
+.Unirse-tutorialRequisitos{
+    margin-top: 1rem;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Pixelon';
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+@media screen and (max-width:1400px) {
+    .Unirse-tutorial{
+        margin: 2rem;
+    }
+    .Unirse-titleTitle{
+        position: static;
+        text-align: center;
+    }
+    .Unirse-descDesc{
+        font-size: 1.2rem;
+        line-height: 1rem;
+    }
+    .Unirse-downloadButton{
+        max-width: 4rem;    
+        max-height: 1.3rem;
+
+    }
+}
+@media screen and (max-width:1200px) {
+    .Unirse-titleTitle{
+        position: static;
+        text-align: center;
+    }
+}
+@media screen and (max-width:992px) {
+    .Unirse-desc{
+        margin-right: 4rem;
+    }
+    .Unirse-tutorial{
+        margin-top: 2rem;
+    }
+    .Unirse-tutorialMedia{
+        margin: 0.3rem;
+        width: 13rem;
+        height: 8rem;
+        background-color: black;
+    }
+    .Unirse-titleTitle{
+        position: static;
+        text-align: center;
+    }
+
+}
+
+
+
+@media screen and (max-width:768px) {
+  
+    .Unirse-container{
+      flex-direction: column;
+      align-items: center;  
+      justify-content: center;
+    }
+    .Unirse-titleTitle{
+        right: 9rem;
+
+    }
+    .Unirse-desc{
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+    }
+    .Unirse-descDesc{
+        font-size: 1.2rem;
+    }
+
+    .Unirse-downloadButton{
+        max-width: 3rem;
+
+    }
+}
